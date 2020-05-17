@@ -74,6 +74,15 @@ rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 libopensplice69 rti-connext-dds-5.3.1 urdfdom_headers"
 ```
 
+### Ignore some sub-packages that we don't want to build
+
+```
+cd ~/cheri/ros2_dashing_minimal
+touch ./src/ros2/rcl_logging/rcl_logging_log4cxx/COLCON_IGNORE
+```
+
+TODO: Create forks which remove these
+
 ## Build for Ubuntu
 
 Two options:
