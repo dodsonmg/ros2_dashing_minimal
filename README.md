@@ -79,6 +79,10 @@ rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys 
 ```
 cd ~/cheri/ros2_dashing_minimal
 touch ./src/ros2/rcl_logging/rcl_logging_log4cxx/COLCON_IGNORE
+touch ./src/ros/ros_tutorials/turtlesim/COLCON_IGNORE
+touch ./src/ros2/demos/intra_process_demo/COLCON_IGNORE
+touch ./src/ros2/demos/pendulum_control/COLCON_IGNORE
+touch ./src/ros2/demos/image_tools/COLCON_IGNORE
 ```
 
 TODO: Create forks which remove these
