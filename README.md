@@ -1,6 +1,8 @@
 # Minimal build of ROS2 dashing C/C++ libraries
 
-Based on the original ROS2 [installation instructions](https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/)
+The following contains step-by-step build instructions for both Ubuntu and CHERI, based on the original ROS2 [installation instructions](https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/).
+
+Alternately, the installation can all be performed by running `scratch_build.sh`, which will require your `sudo` password.  Then you can skip to the `Run on CheriBSD` section, below.
 
 ## Add the ROS2 apt repository
 
