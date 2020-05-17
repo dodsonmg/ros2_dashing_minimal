@@ -71,7 +71,7 @@ vcs import src < ros2_minimal.repos
 
 Two options:
 1. Use the simple CLI input below
-2. Use `build_ubuntu.sh`, which provides some comamnd line arguments for building specific packages (currently not well documented) and builds and installs into directories with `_ubuntu` suffixes to avoid collision with the CHERI build (below)
+2. Use `build_ubuntu.sh`, which provides some command line arguments for building specific packages (currently not well documented) and builds and installs into directories with `_ubuntu` suffixes to avoid collision with the CHERI build (below)
 
 CLI:
 ```
@@ -123,11 +123,22 @@ This will create the library `libPocoFoundation.so.71` in `~/cheri/output/rootfs
 
 This will also create `CrossToolchain.cmake` in `~/cheri/build/poco-128-build`, which we will use below.
 
+### Copy CrossToolchain.cmake from Poco
+
+We need a `cmake` cross-compile toolchain file.  As `Poco` is a simple `cmake` project, and the ROS2 build system (`colcon`) is `cmake` based, we'll just steal that one.
+
+```
+cd ~/cheri/ros2_dashing_minimal
+cp ~/cheri/build/poco-128-build/CrossToolchain.cmake .
+```
+
+TODO: Eventually, if we make ROS2 a `cheribuild` target, this shouldn't be necessary...
+
 ### Build ROS2 libraries
 
 Two options:
 1. Use the simple CLI input below
-2. Use `build.sh`, which provides some comamnd line arguments for building specific packages (currently not well documented)
+2. Use `build.sh`, which provides some command line arguments for building specific packages (currently not well documented)
 
 CLI:
 ```
@@ -162,17 +173,6 @@ cp ~/cheri/output/rootfs-purecap128/usr/local/mips-purecap/libcheri/libPocoFound
 ```
 
 TODO: If we can install `libPocoFoundation.so.71` into the hybrid `rootfs128` we may be able to link against it directly.  Given that `cheribuild` is currently installing it in `rootfs-purecap128`, however, it's easier to just copy the library locally to simplify paths for runtime linking
-
-### Copy CrossToolchain.cmake from Poco
-
-We need a `cmake` cross-compile toolchain file.  As `Poco` is a simple `cmake` project, and the ROS2 build system (`colcon`) is `cmake` based, we'll just steal that one.
-
-```
-cd ~/cheri/ros2_dashing_minimal
-cp ~/cheri/build/poco-128-build/CrossToolchain.cmake .
-```
-
-TODO: Eventually, if we make ROS2 a `cheribuild` target, this shouldn't be necessary...
 
 ### Create a setup file for use within CheriBSD
 
