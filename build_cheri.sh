@@ -2,7 +2,7 @@
 #
 # build command for colcon
 
-TOOLCHAIN_PATH="$HOME/cheri/ros2_dashing_min/CrossToolchain.cmake"
+TOOLCHAIN_PATH="$PWD/CrossToolchain.cmake"
 
 # necessary to find the .cmake files for poco pre-built library
 CMAKE_POCO_PATH="$HOME/cheri/output/sdk/sysroot128/usr/local/mips-purecap/libcheri/cmake"
