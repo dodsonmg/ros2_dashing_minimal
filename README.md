@@ -206,10 +206,10 @@ cd ~/cheri/ros2_dashing_minimal
 source ./install/setup.bash
 
 # create a new setup file for CHERI
-./convert_install_setup.sh
+./convert_install_setup.py
 ```
 
-`convert_install_setup.sh` will create a file `cheri_install_setup.txt` that we can source from within `CheriBSD` to set our environment variables.
+`convert_install_setup.py` will create a file `cheri_install_setup.txt` that we can source from within `CheriBSD` to set our environment variables.
 
 ## Run on CheriBSD
 
@@ -233,7 +233,7 @@ source cheri_install_setup.txt
 
 Run a demo program:
 ```
-./install/minimal_composition_example/lib/minimal_composition_example/composition_composed
+./install/examples_rclcpp_minimal_composition/lib/examples_rclcpp_minimal_composition/composition_composed
 ```
 which should start a publisher and subscriber in the same process, with alternating lines printed to stdout saying `I published: [incrementing count]` and `I heard: [incrementing count]`.
 
