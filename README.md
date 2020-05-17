@@ -163,6 +163,14 @@ Build script:
 - `build.sh [package]` will build the named package only
 - `build.sh [package] clean` will delete `build/[package]` and `install/[package]` and rebuild the named package and its dependencies
 
+### Install dependencies with rosdep
+```
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 libopensplice69 rti-connext-dds-5.3.1 urdfdom_headers"
+```
+
+
 ### Copy libPocoFoundation.so.71
 
 We will need to link against `libPocoFoundation.so.71` at runtime, so we copy it locally.
