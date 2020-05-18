@@ -185,10 +185,10 @@ colcon build \
 ```
 
 Build script:
-- `build.sh` will build all packages, but skip those that had successfully been built already
-- `build.sh clean` will delete the `build` and `install` directories and build all packages
-- `build.sh [package]` will build the named package only
-- `build.sh [package] clean` will delete `build/[package]` and `install/[package]` and rebuild the named package and its dependencies
+- `build_cheri.sh` will build all packages, but skip those that had successfully been built already
+- `build_cheri.sh clean` will delete the `build` and `install` directories and build all packages
+- `build_cheri.sh [package]` will build the named package only
+- `build_cheri.sh [package] clean` will delete `build/[package]` and `install/[package]` and rebuild the named package and its dependencies
 
 ### Copy libPocoFoundation.so.71
 
