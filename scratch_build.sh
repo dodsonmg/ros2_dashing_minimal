@@ -45,7 +45,7 @@ vcs import src < ros2_minimal.repos
 ## install dependencies with rosdep
 sudo rosdep init
 rosdep update
-rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 libopensplice69 rti-connext-dds-5.3.1 urdfdom_headers"
+rosdep install --from-paths src --ignore-src --rosdistro dashing -y --skip-keys "console_bridge libopensplice67 libopensplice69 urdfdom_headers"
 
 ## ignore packages we don't want to build
 cd ~/cheri/ros2_dashing_minimal
