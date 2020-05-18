@@ -4,6 +4,11 @@ The following contains step-by-step build instructions for both Ubuntu and CHERI
 
 Alternately, the installation can all be performed by running `scratch_build.sh`, which will require your `sudo` password.  Then you can skip to the `Run on CheriBSD` section, below.
 
+The CHERI-related build instructions assume the following directory structure:
+- This repository cloned to `$HOME/cheri/ros2_dashing_minimal`
+- `cheribuild` located in `$HOME/cheribuild`
+- `cheribuild` artifacts in `$HOME/cheri` (e.g., `build` and `output`)
+
 ## Add the ROS2 apt repository
 
 ```
