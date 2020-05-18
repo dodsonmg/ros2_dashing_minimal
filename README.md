@@ -229,7 +229,7 @@ cd ~/cheribuild
 Mount `rootfs` and `source` directories:
 ```
 ./qemu-mount-roofs.sh
-./qemu-mount-source.sh
+./qemu-mount-sources.sh
 ```
 
 Change to the `ros2_dashing_minimal` directory and source the setup file (replace `<prefix>` with the contents of `$HOME` on your host machine):
