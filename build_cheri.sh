@@ -5,7 +5,12 @@
 TOOLCHAIN_PATH="$PWD/CrossToolchain.cmake"
 
 # necessary to find the .cmake files for poco pre-built library
-CMAKE_POCO_PATH="$HOME/cheri/output/sdk/sysroot128/usr/local/mips-purecap/libcheri/cmake"
+if command -v cheribuild.py; then
+	cheribuild_outputroot=$(cheribuild.py --get-config-option output-root 2>/dev/null | tail -n1)
+	CMAKE_POCO_PATH="${cheribuild_outputroot}/sdk/sysroot128/usr/local/mips-purecap/libcheri/cmake"
+else
+	CMAKE_POCO_PATH="$HOME/cheri/output/sdk/sysroot128/usr/local/mips-purecap/libcheri/cmake"
+fi
 
 if [ "$#" -eq 0 ]; then
 	colcon build \
