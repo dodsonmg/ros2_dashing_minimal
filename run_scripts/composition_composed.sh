@@ -4,4 +4,4 @@
 # export CYCLONEDDS_URI=file://home/broomstick/cheri/ros2_dashing_min/cyclonedds.xml
 
 # run composition example
-../install/minimal_composition_example/lib/minimal_composition_example/composition_composed
+../install/examples_rclcpp_minimal_composition/lib/examples_rclcpp_minimal_composition/composition_composed
