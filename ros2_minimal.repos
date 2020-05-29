@@ -27,8 +27,6 @@ repositories:
     type: git
     url: https://github.com/eclipse-cyclonedds/cyclonedds.git
     version: master
-#    url: https://github.com/dodsonmg/cyclonedds.git
-#    version: cheri
 #  eProsima/Fast-CDR:
 #    type: git
 #    url: https://github.com/eProsima/Fast-CDR.git
@@ -247,10 +245,8 @@ repositories:
 #    version: dashing
   ros2/rmw_cyclonedds:
     type: git
-#    url: https://github.com/ros2/rmw_cyclonedds.git
-#    version: dashing-eloquent
-    url: https://github.com/dodsonmg/rmw_cyclonedds.git
-    version: cheri
+    url: https://github.com/ros2/rmw_cyclonedds.git
+    version: dashing-eloquent
 #  ros2/rmw_fastrtps:
 #    type: git
 #    url: https://github.com/ros2/rmw_fastrtps.git
@@ -365,7 +361,5 @@ repositories:
 #    version: dashing
   ros2/yaml_cpp_vendor:
     type: git
-#    url: https://github.com/ros2/yaml_cpp_vendor.git
-#    version: dashing
-    url: https://github.com/dodsonmg/yaml_cpp_vendor.git
-    version: cheri
+    url: https://github.com/ros2/yaml_cpp_vendor.git
+    version: master
