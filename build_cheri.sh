@@ -18,7 +18,6 @@ if [ "$#" -eq 0 ]; then
 		--cmake-args \
 			-DCMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_PATH \
 			-DBUILD_TESTING=NO \
-			-DTHIRDPARTY=ON \
 			-DCMAKE_PREFIX_PATH="$CMAKE_POCO_PATH;$CMAKE_PREFIX_PATH" \
 		--no-warn-unused-cli
 
@@ -29,7 +28,6 @@ elif [ "$#" -eq 1 ]; then
 			--cmake-args \
 				-DCMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_PATH \
 				-DBUILD_TESTING=NO \
-				-DTHIRDPARTY=ON \
 				-DCMAKE_PREFIX_PATH="$CMAKE_POCO_PATH;$CMAKE_PREFIX_PATH" \
 			--no-warn-unused-cli
     else
@@ -40,7 +38,6 @@ elif [ "$#" -eq 1 ]; then
 			--cmake-args \
 				-DCMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_PATH \
 				-DBUILD_TESTING=NO \
-				-DTHIRDPARTY=ON \
 				-DCMAKE_PREFIX_PATH="$CMAKE_POCO_PATH;$CMAKE_PREFIX_PATH" \
 			--no-warn-unused-cli
     fi
@@ -52,7 +49,6 @@ elif [ "$#" -eq 2 ]; then
 			--cmake-args \
 				-DCMAKE_TOOLCHAIN_FILE=$TOOLCHAIN_PATH \
 				-DBUILD_TESTING=NO \
-				-DTHIRDPARTY=ON \
 				-DCMAKE_PREFIX_PATH="$CMAKE_POCO_PATH;$CMAKE_PREFIX_PATH" \
 			--no-warn-unused-cli
 	else

@@ -14,7 +14,6 @@ if [ "$#" -eq 0 ]; then
 		--install-base ./install_ubuntu \
 		--cmake-args \
 			-DBUILD_TESTING=NO \
-			-DTHIRDPARTY=ON \
 		--no-warn-unused-cli
 
 elif [ "$#" -eq 1 ]; then
@@ -25,7 +24,6 @@ elif [ "$#" -eq 1 ]; then
 			--install-base ./install_ubuntu \
 			--cmake-args \
 				-DBUILD_TESTING=NO \
-				-DTHIRDPARTY=ON \
 			--no-warn-unused-cli
     else
 		rm -r ./build_ubuntu/$1 ./install_ubuntu/$1
@@ -36,7 +34,6 @@ elif [ "$#" -eq 1 ]; then
 			--packages-up-to=$1 \
 			--cmake-args \
 				-DBUILD_TESTING=NO \
-				-DTHIRDPARTY=ON \
 			--no-warn-unused-cli
     fi
 elif [ "$#" -eq 2 ]; then
@@ -48,7 +45,6 @@ elif [ "$#" -eq 2 ]; then
 			--install-base ./install_ubuntu \
 			--cmake-args \
 				-DBUILD_TESTING=NO \
-				-DTHIRDPARTY=ON \
 			--no-warn-unused-cli
 	else
 	    echo "Usage: ./build.sh [package] [clean]"
