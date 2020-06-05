@@ -11,5 +11,4 @@ objdump.sh
 CrossToolchain.cmake
 cyclonedds.xml
 cheri_setup.*
-run-ros2-tests.sh
 .vscode

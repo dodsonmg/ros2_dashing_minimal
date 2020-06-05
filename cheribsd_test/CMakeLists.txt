@@ -32,21 +32,7 @@ if(NOT WIN32)
     )
 endif()
 
-add_executable(composition_publisher src/standalone_publisher.cpp)
-target_link_libraries(composition_publisher composition_nodes)
-ament_target_dependencies(composition_publisher
-  rclcpp composition_nodes)
-
-add_executable(composition_subscriber src/standalone_subscriber.cpp)
-target_link_libraries(composition_subscriber composition_nodes)
-ament_target_dependencies(composition_subscriber
-  rclcpp composition_nodes)
-
-add_executable(composition_composed src/composed.cpp)
-target_link_libraries(composition_composed composition_nodes)
-ament_target_dependencies(composition_composed rclcpp class_loader)
-
-add_executable(cheribsd_test src/composed.cpp)
+add_executable(cheribsd_test src/cheribsd_test.cpp)
 target_link_libraries(cheribsd_test composition_nodes)
 ament_target_dependencies(cheribsd_test rclcpp class_loader)
 
@@ -57,9 +43,6 @@ install(TARGETS
   RUNTIME DESTINATION bin)
 
 install(TARGETS
-  composition_publisher
-  composition_subscriber
-  composition_composed
   cheribsd_test
   DESTINATION lib/${PROJECT_NAME})
 
