@@ -10,3 +10,4 @@ cheri_install_setup.txt
 objdump.sh
 CrossToolchain.cmake
 cyclonedds.xml
+cheri_setup.csh
