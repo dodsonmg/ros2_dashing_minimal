@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-ROS2_ROOT="$(realpath .)"
+ROS2_ROOT="./source"
 if ! test -e "${ROS2_ROOT}/run-ros2-tests.sh"; then
    echo "You have to cd to the directory where $0 is located first!"
    exit 1
@@ -16,7 +16,9 @@ else
 fi
 
 # set LD_CHERI_LIBRARY_PATH and LD_LIBRARY_PATH to include all the ROS2 libraries
-. ./cheri_setup.sh
+. ${ROS2_ROOT}/cheri_setup.sh
+
+ldd ${ROS2_TEST}
 
 if "${ROS2_TEST}"
 then
