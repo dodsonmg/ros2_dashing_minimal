@@ -230,12 +230,12 @@ repositories:
 #    version: dashing
     url: https://github.com/dodsonmg/rcutils.git
     version: cheri
-  ros2/realtime_support:
-    type: git
+#  ros2/realtime_support:
+#    type: git
 #    url: https://github.com/ros2/realtime_support.git
 #    version: dashing
-    url: https://github.com/dodsonmg/realtime_support.git
-    version: cheri
+#    url: https://github.com/dodsonmg/realtime_support.git
+#    version: cheri
   ros2/rmw:
     type: git
     url: https://github.com/ros2/rmw.git
