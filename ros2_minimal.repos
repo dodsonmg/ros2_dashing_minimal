@@ -363,3 +363,7 @@ repositories:
     type: git
     url: https://github.com/ros2/yaml_cpp_vendor.git
     version: master
+  dodsonmg/ros2_cheribsd_test
+    type: git
+    url: https://github.com/dodsonmg/ros2_cheribsd_test.git
+    version: master
