@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-ROS2_ROOT="./source"
+ROS2_ROOT="$(realpath .)"
 if ! test -e "${ROS2_ROOT}/run-ros2-tests.sh"; then
    echo "You have to cd to the directory where $0 is located first!"
    exit 1
