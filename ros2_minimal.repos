@@ -26,7 +26,7 @@ repositories:
   eclipse-cyclonedds/cyclonedds:
     type: git
     url: https://github.com/eclipse-cyclonedds/cyclonedds.git
-#    version: master
+    version: master
     version: 0b50928dd3683b97663ed7dc41f158851676e468
 #  eProsima/Fast-CDR:
 #    type: git
