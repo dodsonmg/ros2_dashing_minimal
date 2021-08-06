@@ -5,6 +5,8 @@ install_ubuntu
 log
 src
 
+.cheribuild*
+
 *.so*
 cheri_install_setup.txt
 objdump.sh
